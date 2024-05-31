@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 22px 30px; /* Adjusted padding */
+    margin-top: 20px; /* Added 'px' unit */
+    display: flex;
+    justify-content: space-between; /* Ensures nav and other content are on opposite ends */
+}
+
+nav {
+    width: 95%; /* Adjusted width */
+    text-align: right; /* Aligns navigation items to the right */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px; /* Adjusted margin to add space between menu items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove margin for the first menu item */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+    width: 45%;
+    padding: 10px;
+    margin-top: 90px;
+    margin-left: 150px;
+    margin-bottom: 200px;
+}
+
+.card {
+    box-shadow: 0 6px 12px 15px rgba(234, 136, 90, 0.2);
+    margin: 10px;
+    margin-left: 2.5cm;
+    padding: 10px;
+    border-radius: 20px;
+    max-height: 10cm;
+    width: 8cm;
+    height: 9.5cm;
+}
+
+button {
+    text-align: center;
+    margin-left: 2cm;
+    padding: 10px 20px; /* Added padding for better button appearance */
+    font-size: 16px; /* Adjusted font size */
+    background-color: #97d0df; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #e9a7e0; /* Darker green on hover */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

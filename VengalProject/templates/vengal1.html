@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colour Customization</title>
+<link rel="stylesheet" href="/static/color.css">
+</head>
+<body>
+    <header>
+        <nav id="navigation-bar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contacts Us</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Image Color Picker</h1>
+    <input type="file" id="image-upload" accept="image/*">
+    <input type="color" id="color-picker">
+    <button class="button" id="increase-size">Increase Size</button>
+    <button class="button" id="decrease-size">Decrease Size</button>
+    <button class="button" id="eraser">Eraser</button>
+    <button class="button" id="switch-mode">Switch to Eraser</button>
+    <button class="button" id="save">Save Image</button>
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

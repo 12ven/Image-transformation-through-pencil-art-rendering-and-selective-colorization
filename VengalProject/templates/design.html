@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil art image</title>
+    <link rel="stylesheet" href="static/design.css">
+    <title> Web Page</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navigation-bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contacts Us</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+  </header>
+ 
+  <div class="form-container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" id="imageInput" accept=".jpg, .png, .jpeg" onchange="displayImagePath()">
+      <input type="submit" value="Upload">
+  </form>
+</div>
+  <main>
+ 
+    <section id="pencil-art-section">
+    <div class= card>
+        <p>{{ textinfo }}</p>
+        <div id="pencil-art-image">
+          <img id="im" src={{inputImg}} alt="Input Image">
+        </div>
+        </div>
+    </section>
+    <section id="color-customize-section">
+    <div class= card>
+        <div id="color-customization">
+          <img src={{outputImg}}  id="generatedImage" alt="Server Generated Image">
+        </div>
+        <button onclick="saveGeneratedImage()"> Save</button>
+     </div>
+    </section>
+
+</main>
+
+    <script>
+      function displayImagePath() {
+          const input = document.getElementById('imageInput');
+          const imagePath = document.getElementById('imagePath');
+
+          if (input.files && input.files[0]) {
+              const reader = new FileReader();
+
+              reader.onload = function (e) {
+                  imagePath.innerText = "Selected Image Path: " + e.target.result;
+              }
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      };
+      if (file) {
+    reader.readAsDataURL(file);
+  }
+
+  function saveGeneratedImage() {
+    const generatedImage = document.getElementById('generatedImage');
+    
+    // Create a new canvas element
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    
+    // Set canvas dimensions to match the image dimensions
+    canvas.width = generatedImage.naturalWidth;
+    canvas.height = generatedImage.naturalHeight;
+    
+    // Draw the image onto the canvas
+    context.drawImage(generatedImage, 0, 0);
+    
+    // Create a temporary link to download the canvas image
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'generated_image.png';
+    
+    // Simulate a click on the link to trigger the download
+    link.click();
+}
+// const Image = document.getElementById('generatedImage');
+
+  window.addEventListener('load', function() {
+    // Reset image sources
+    document.getElementById('im').src = "";
+    document.getElementById('generatedImage').src = "";
+  });
+
+
+  </script>
+    
+</body>
+</html>

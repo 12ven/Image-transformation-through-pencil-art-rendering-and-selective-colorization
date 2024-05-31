@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#b2d7e4.;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 22px 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    width: 95%;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+section {
+    width: 45%;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 0px;
+    margin-bottom: 200px;
+}
+
+.card {
+    box-shadow: 0 6px 12px 15px rgba(234, 136, 90, 0.2);
+    margin: 10px;
+    margin-left: 4.5cm;
+    padding: 10px;
+    border-radius: 20px;
+    max-height: 10cm;
+    width: 8cm;
+    height: 9.5cm;
+}
+
+img {
+    max-width: 100%;
+    max-height: 200px; /* Adjust height as needed */
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+button {
+    text-align: center;
+    margin-left: 2cm;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style for the form container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the file input */
+#imageInput {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Style for the upload button */
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the upload button */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
